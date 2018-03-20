@@ -1,0 +1,26 @@
+{
+  "name": "basewoocommerce",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lehnihon/basewoocommerce.git"
+  },
+  "author": "Leandro Kenji Ishikawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lehnihon/basewoocommerce/issues"
+  },
+  "homepage": "https://github.com/lehnihon/basewoocommerce#readme",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5",
+    "wowjs": "^1.1.3"
+  }
+}
