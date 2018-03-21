@@ -1,39 +1,39 @@
 .checkout-button{
     @extend .btn;
-    background-color:$color1;
-    color:#FFF;
+    background-color:$color2;
+    color:$color1;
 }
 
 .checkout-button:hover{
-    color:$color1;
+    color:$color2;
     background-color:#FFF;
-    border:1px solid $color1;
+    border:1px solid $color2;
 }
 
 input.alt{
     @extend .btn;
-    background-color:$color1;
-    color:#FFF;
+    background-color:$color2;
+    color:$color1;
 }
 
 input.alt:hover{
-    color:$color1;
+    color:$color2;
     cursor: pointer;
     background-color:#FFF;
-    border:1px solid $color1;
+    border:1px solid $color2;
 }
 
 button.single_add_to_cart_button{
     @extend .btn;
-    background-color:$color1;
-    color:#FFF;
+    background-color:$color2;
+    color:$color1;
 }
 
 button.single_add_to_cart_button:hover{
-    color:$color1;
+    color:$color2;
     cursor: pointer;
     background-color:#FFF;
-    border:1px solid $color1;
+    border:1px solid $color2;
 }
 
 .shipping-calculator-form{
