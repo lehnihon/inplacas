@@ -12,17 +12,100 @@
  */
 
 get_header(); ?>
-<div class="container">
-	<div class="row wow fadeInUp">
-	    <div class="col-sm">
-	      1 of 3
-	    </div>
-	    <div class="col-sm">
-	      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	    </div>
-	    <div class="col-sm">
-	      3 of 3
-	    </div>
+<main>
+  <div id="home">
+    <div class="banner container">
+    	<div class="row wow fadeIn">
+    	    <div class="col-md">
+            <?php 
+            echo do_shortcode('[smartslider3 slider=3]');
+            ?>
+          </div>
+      </div>
     </div>
-</div>
+    <div class="publicidade container">
+      <div class="row wow fadeIn">
+          <div class="col-md">
+            <?php 
+            echo do_shortcode('[smartslider3 slider=2]');
+            ?>
+          </div>
+          <div class="col-md">
+            pub2
+          </div>
+          <div class="col-md">
+            pub3
+          </div>
+      </div>
+    </div>
+    <div class="prods container">
+      <div class="row wow fadeIn">
+        <?php
+        $args = array( 'post_type' => 'product', 'posts_per_page' => 8,  'orderby' => 'rand' );
+        $loop = new WP_Query( $args );
+
+        while ( $loop->have_posts() ) : $loop->the_post();
+          $price = get_post_meta( get_the_ID(), '_regular_price', true);
+        ?>
+        <div class="col-md-3 prod">
+          <a class="wrap" href="<?php the_permalink(); ?>">
+            <h2><?php the_title(); ?></h2>
+            <?php the_post_thumbnail('home-thumb', array(
+              'class' => "e-cinza img-responsive",
+            )); ?>
+            <div class="preco">
+              <span>R$ <?php echo number_format($price, 2, ',', ''); ?></span>
+            </div>
+            <div class="botao">Comprar</div>
+          </a>
+        </div>
+        <?php
+        endwhile;
+        ?>
+      </div>
+    </div>
+    <div class="news">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"><img class="img-fluid" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/assets/img/news.jpg"; ?>" /></div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Nome" name="">
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="E-mail" name="">
+          </div>
+          <div class="col-md-2">
+            <div class="botao">Enviar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="prods container paddtop">
+      <div class="row wow fadeIn">
+        <?php
+        $args = array( 'post_type' => 'product', 'posts_per_page' => 4,  'orderby' => 'rand' );
+        $loop = new WP_Query( $args );
+
+        while ( $loop->have_posts() ) : $loop->the_post();
+          $price = get_post_meta( get_the_ID(), '_regular_price', true);
+        ?>
+        <div class="col-md-3 prod">
+          <a class="wrap" href="<?php the_permalink(); ?>">
+            <h2><?php the_title(); ?></h2>
+            <?php the_post_thumbnail('home-thumb', array(
+              'class' => "e-cinza img-responsive",
+            )); ?>
+            <div class="preco">
+              <span>R$ <?php echo number_format($price, 2, ',', ''); ?></span>
+            </div>
+            <div class="botao">Comprar</div>
+          </a>
+        </div>
+        <?php
+        endwhile;
+        ?>
+      </div>
+    </div>
+</main>
 <?php get_footer(); ?>

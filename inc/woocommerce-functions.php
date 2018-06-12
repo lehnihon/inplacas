@@ -76,4 +76,13 @@ if ( ! function_exists( 'woocommerce_keep_buying' ) ) {
 	}
 }
 
+if ( ! function_exists( 'lki_after_shop_loop_item_button' ) ) {
+  function lki_after_shop_loop_item_button() {
+  ?>
+    <div class="botao">Comprar</div>
+  <?php
+  }
+}
+
+
 

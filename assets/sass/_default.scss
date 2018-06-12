@@ -49,3 +49,24 @@ h5{
     opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
+
+.botao{
+  background-color:$color2;
+  color:$color1;
+  border:1px solid $color2;
+  display:inline-block;
+  padding:8px;
+  width:100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.botao:hover{
+  color:$color2;
+  background-color:#FFF;
+}

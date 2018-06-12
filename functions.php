@@ -7,7 +7,7 @@
 
 if ( ! function_exists( 'site_setup' ) ) :
 function site_setup() {
-	add_image_size('home-thumb',780,300,true);
+	add_image_size('home-thumb',600,600,true);
 	add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 }
 endif; // site_setup
@@ -31,6 +31,6 @@ add_action( 'wp_enqueue_scripts', 'site_scripts' );
 /**
  * Load integration
  */
-require '/inc/woocommerce-hooks.php';
-require '/inc/woocommerce-functions.php';
+require 'inc/woocommerce-hooks.php';
+require  'inc/woocommerce-functions.php';
 
