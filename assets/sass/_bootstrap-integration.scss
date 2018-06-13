@@ -160,21 +160,20 @@ table.cart{
 	}
 }
 
+
 /*
 CHECKOUT
 */
-
-.checkout{
-	.col2-set{
-		@extend .row;
-		.col-1{
-			@extend .col-md-6;
-		}
-		.col-2{
-			@extend .col-md-6;
-		}
+.col2-set{
+	@extend .row;
+	.col-1{
+		@extend .col-md-6;
+	}
+	.col-2{
+		@extend .col-md-6;
 	}
 }
+
 
 /*
 ORDER DETAILS

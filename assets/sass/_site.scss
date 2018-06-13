@@ -76,6 +76,55 @@
 	}
 }
 
+.minha-conta{
+  padding:40px 0;
+
+  h1{
+    color:#005337;
+    font-size:20px;
+    font-weight:bold;
+    text-align:left;
+    padding-bottom:40px;
+  }
+  h2{
+    color:#005337;
+    font-size:16px;
+    font-weight:bold;
+    text-align:left;
+    padding-bottom:20px;
+  }
+
+  .lost_password, .duvidas{
+    text-align:left;
+    a{
+      color:#ababab;
+      font-size:14px;
+    }
+  }
+}
+
+.pag-padrao{
+  padding:40px 0;
+
+  h1{
+    color:#005337;
+    font-size:20px;
+    font-weight:bold;
+    text-align:left;
+    padding-bottom:40px;
+  }
+  h2{
+    color:#005337;
+    font-size:16px;
+    font-weight:bold;
+    text-align:left;
+    padding-bottom:20px;
+  }
+
+  .input-text, input{
+    margin-bottom:10px;
+  }
+}
 
 .banner{
   margin-bottom:10px;
@@ -181,6 +230,37 @@
 	}
 }
 
-@media (max-width: 991px) {
+@include media-breakpoint-up(md) {
+  .menu-open{
+    display:none !important;
+  }
+}
 
+@include media-breakpoint-down(md) {
+  #header{
+    .topo-menu{
+      display:none;
+    }
+    .logo{
+      width:200px;
+      margin-bottom:20px;
+    }
+    .search-form{
+      display:none;
+    }
+    nav{
+      display:none;
+    }
+    #menu{
+      display:none;
+    }
+  }
+  .news{
+    img{
+      margin-bottom:10px;
+    }
+    input{
+      margin-bottom:10px;
+    }
+  }
 }

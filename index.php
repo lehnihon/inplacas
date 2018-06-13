@@ -27,14 +27,18 @@ get_header(); ?>
       <div class="row wow fadeIn">
           <div class="col-md">
             <?php 
-            echo do_shortcode('[smartslider3 slider=2]');
+            echo do_shortcode('[smartslider3 slider=4]');
             ?>
           </div>
           <div class="col-md">
-            pub2
+            <?php 
+            echo do_shortcode('[smartslider3 slider=5]');
+            ?>
           </div>
           <div class="col-md">
-            pub3
+            <?php 
+            echo do_shortcode('[smartslider3 slider=6]');
+            ?>
           </div>
       </div>
     </div>
