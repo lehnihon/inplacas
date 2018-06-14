@@ -49,7 +49,8 @@ get_header(); ?>
         $loop = new WP_Query( $args );
 
         while ( $loop->have_posts() ) : $loop->the_post();
-          $price = get_post_meta( get_the_ID(), '_regular_price', true);
+          global $product;
+          $price = $product->get_price_html();
         ?>
         <div class="col-md-3 prod">
           <a class="wrap" href="<?php the_permalink(); ?>">
@@ -58,7 +59,7 @@ get_header(); ?>
               'class' => "e-cinza img-responsive",
             )); ?>
             <div class="preco">
-              <span>R$ <?php echo number_format($price, 2, ',', ''); ?></span>
+              <?php echo $price ?>
             </div>
             <div class="botao">Comprar</div>
           </a>
@@ -92,7 +93,8 @@ get_header(); ?>
         $loop = new WP_Query( $args );
 
         while ( $loop->have_posts() ) : $loop->the_post();
-          $price = get_post_meta( get_the_ID(), '_regular_price', true);
+          global $product;
+          $price = $product->get_price_html();
         ?>
         <div class="col-md-3 prod">
           <a class="wrap" href="<?php the_permalink(); ?>">
@@ -101,7 +103,7 @@ get_header(); ?>
               'class' => "e-cinza img-responsive",
             )); ?>
             <div class="preco">
-              <span>R$ <?php echo number_format($price, 2, ',', ''); ?></span>
+              <?php echo $price ?>
             </div>
             <div class="botao">Comprar</div>
           </a>

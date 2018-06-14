@@ -126,6 +126,19 @@
   }
 }
 
+.checkout{
+  #customer_details{
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,.1);
+    padding:10px;
+  }
+  #order_review{
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,.1);
+    padding:10px;
+  }
+}
+
 .banner{
   margin-bottom:10px;
 }

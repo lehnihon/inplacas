@@ -36,6 +36,16 @@ button.single_add_to_cart_button:hover{
     background-color:#FFF;
 }
 
+.checkout{
+  .button{
+      @extend .btn;
+      @extend .btn-dark;
+  }
+  .button:hover{
+      cursor: pointer;
+  }
+}
+
 .shipping-calculator-form{
     .button{
         @extend .btn;

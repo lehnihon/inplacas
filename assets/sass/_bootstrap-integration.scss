@@ -62,23 +62,6 @@ ul.products{
 /*
 CART
 */
-.product-quantity{
-	.quantity{
-		label{
-			display:none;
-		}
-	}
-	.qty{
-		padding:5px;
-		width: 50px;
-		height: 38px;
-		border:1px solid rgba(0,0,0,.1);
-		border-radius:4px;
-	}
-}
-input[name='update_cart']{
-	visibility: hidden;
-}
 
 table.cart{
 	border:1px solid $color1 !important;
@@ -118,6 +101,30 @@ table.cart{
 		    padding:5px;
 		}
 	}
+
+  .product-quantity{
+    .quantity{
+      label{
+        display:none;
+      }
+    }
+    .qty{
+      padding:5px;
+      width: 50px;
+      height: 38px;
+      border:1px solid rgba(0,0,0,.1);
+      border-radius:4px;
+    }
+  }
+  .actions{
+    .button{
+      visibility: hidden !important;
+      width:0;
+      height:0;
+      padding:0;
+      position:absolute;
+    }
+  }
 }
 
 .cart-collaterals{
@@ -172,6 +179,45 @@ CHECKOUT
 	.col-2{
 		@extend .col-md-6;
 	}
+}
+
+.checkout{
+  .woocommerce-input-wrapper{
+    display:block;
+    width: 100%;
+  }
+
+  h3{
+    font-size:20px;
+    text-align:left;
+    margin-bottom:20px;
+    margin-top:20px;
+    font-weight:bold;
+  }
+
+  #order_review_heading{
+    display:none;
+  }
+
+  #order_review{
+    @extend .row;
+    margin-top:10px;
+    text-align:left;
+    .shop_table{
+      width:100%;
+      margin-bottom:25px;
+      p{
+        margin:0;
+      }
+      tr{
+        @extend .row;
+
+        td,th{
+          @extend .col;
+        }
+      }
+    }
+  }
 }
 
 

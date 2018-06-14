@@ -28,6 +28,85 @@ function site_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'site_scripts' );
 
+function cliente_empresa(){
+  $current_user = wp_get_current_user();
+  $current_user->roles;
+  foreach($current_user->roles as $cli){
+    if($cli == 'cliente_empresa')
+      return true;
+  }
+  return false;
+}
+
+function add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
+  $product = wc_get_product( $product_id );
+
+  if(cliente_empresa()){
+    $price = get_post_meta($product->id,'_text_field',true);
+    if(empty($price))
+      $price = get_post_meta($product->id,'_regular_price',true);
+  }else{
+    $price = get_post_meta($product->id,'_regular_price',true);
+  }
+  $cart_item_data['cliente_empresa']= $price;
+
+  return $cart_item_data;
+}
+add_filter( 'woocommerce_add_cart_item_data', 'add_cart_item_data', 10, 3 );
+
+function before_calculate_totals( $cart_obj ) {
+  if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
+    return;
+  }
+  // Iterate through each cart item
+  foreach( $cart_obj->get_cart() as $key=>$value ) {
+    if( isset( $value['cliente_empresa'] ) ) {
+      $price = $value['cliente_empresa'];
+      $value['data']->set_price( ( $price ) );
+    }
+  }
+}
+add_action( 'woocommerce_before_calculate_totals', 'before_calculate_totals', 10, 1 );
+
+
+function sv_change_product_html( $price_html, $product ) {
+  if(cliente_empresa()){
+    $price = get_post_meta($product->id,'_text_field',true);
+  }else{
+    $price = get_post_meta($product->id,'_regular_price',true);
+  }
+  if(!empty($price))
+  $price_html = '<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">R$</span>'.$price.'</span>';  
+
+  return $price_html;
+}
+add_filter( 'woocommerce_get_price_html', 'sv_change_product_html', 10, 2 );
+
+
+function woo_add_custom_general_fields(){
+  woocommerce_wp_text_input( 
+    array( 
+      'id'          => '_text_field', 
+      'label'       => __( 'Preço empresa (R$)', 'woocommerce' ), 
+      'placeholder' => '',
+      'class' => 'short wc_input_price',
+      'desc_tip'    => 'true'
+    )
+  );
+}
+
+function woo_add_custom_general_fields_save( $post_id ){
+  $woocommerce_text_field = $_POST['_text_field'];
+  if( !empty( $woocommerce_text_field ) )
+    update_post_meta( $post_id, '_text_field', esc_attr( $woocommerce_text_field ) );
+}
+
+// Display Fields
+add_action( 'woocommerce_product_options_general_product_data', 'woo_add_custom_general_fields' );
+
+// Save Fields
+add_action( 'woocommerce_process_product_meta', 'woo_add_custom_general_fields_save' );
+
 /**
  * Load integration
  */

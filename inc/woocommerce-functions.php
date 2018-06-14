@@ -9,7 +9,6 @@ if ( ! function_exists( 'lki_before_content' ) ) {
 				get_sidebar();
 				?>
 				<div id="content" class="col-md-9">
-					<div class="box">
 		<?php
 	}
 }
@@ -17,7 +16,6 @@ if ( ! function_exists( 'lki_before_content' ) ) {
 if ( ! function_exists( 'lki_after_content' ) ) {
 	function lki_after_content() {
 		?>
-					</div>
 				</div>
 			</div><!-- #primary -->
 		</div>
