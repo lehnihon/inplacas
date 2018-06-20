@@ -9,7 +9,11 @@ get_header(); ?>
       <div class="box">
         <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php get_template_part( 'template-parts/content', 'single' ); ?>
+        <article id="post-<?php the_ID(); ?>" class="article-single">
+
+            <?php the_content(); ?>
+
+        </article><!-- #post-## -->
 
         <?php endwhile; // End of the loop. ?>
       </div>

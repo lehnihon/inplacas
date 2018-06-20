@@ -64,16 +64,16 @@ CART
 */
 
 table.cart{
-	border:1px solid $color1 !important;
+	border:1px solid rgba(0,0,0,.1);
 	width:100%;
+  background-color:#FFF;
 	border-collapse: separate;
 	text-align:left;
 	margin-bottom:20px;
 
 	thead{
-		background-color:$color1;
-		color:#FFF;
-
+    background-color:#858585;
+    color:#FFF;
 		th{
 			font-size:14px;
 		}
@@ -139,6 +139,7 @@ table.cart{
 
 		.shop_table{
 			border:1px solid rgba(0, 0, 0, 0.1) !important;
+      background-color:#FFF;
 			width:50%;
 			border-collapse: separate;
 			font-size:14px;
@@ -171,17 +172,17 @@ table.cart{
 /*
 CHECKOUT
 */
-.col2-set{
-	@extend .row;
-	.col-1{
-		@extend .col-md-6;
-	}
-	.col-2{
-		@extend .col-md-6;
-	}
-}
-
 .checkout{
+  .col2-set{
+    @extend .row;
+    .col-1{
+      @extend .col-md-6;
+    }
+    .col-2{
+      @extend .col-md-6;
+    }
+  }
+
   .woocommerce-input-wrapper{
     display:block;
     width: 100%;
@@ -220,6 +221,54 @@ CHECKOUT
   }
 }
 
+
+/*
+MY ACOUNT
+*/
+.minha-conta{
+  .woocommerce{
+    @extend .row;
+
+    a{
+      color:#005337;
+    }
+
+    a:hover{
+      color:#00B476;
+    }
+
+    .woocommerce-MyAccount-navigation{
+      @extend .col-md-3;
+      text-align:left;
+    }
+    .woocommerce-MyAccount-content{
+      @extend .col-md-9;
+      text-align:left;
+      .woocommerce-input-wrapper{
+        display:block;
+        width: 100%;
+      }
+
+      h3{
+        font-size:20px;
+        text-align:left;
+        margin-bottom:20px;
+        margin-top:20px;
+        font-weight:bold;
+      }
+    }
+    .col2-set{
+      @extend .col-md-12;
+      @extend .row;
+      .col-1{
+        @extend .col-md-6;
+      }
+      .col-2{
+        @extend .col-md-6;
+      }
+    }
+  }
+}
 
 /*
 ORDER DETAILS

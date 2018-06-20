@@ -101,6 +101,30 @@
       font-size:14px;
     }
   }
+
+  .woocommerce{
+    .woocommerce-MyAccount-navigation{
+      a{
+        display:block;
+        background-color:$color2;
+        color:$color1;
+        text-align:left;
+        padding:8px 20px;
+        margin-bottom:5px;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+      a:hover{
+        background-color:$color3;
+        color:#FFF;
+      }
+    }
+    .woocommerce-MyAccount-content{
+    }
+  }
 }
 
 .pag-padrao{
@@ -128,14 +152,12 @@
 
 .checkout{
   #customer_details{
-    border-radius: 5px;
-    border:1px solid rgba(0,0,0,.1);
     padding:10px;
+    background-color:#FFF;
   }
   #order_review{
-    border-radius: 5px;
-    border:1px solid rgba(0,0,0,.1);
     padding:10px;
+    background-color:#FFF;
   }
 }
 
@@ -154,6 +176,62 @@
 .paddtop{
   padding-top:60px;
 }
+.single-product{
+  padding-bottom:40px;
+
+  .woocommerce-product-gallery__trigger{
+    display:none;
+  }
+
+  h2{
+    color:$color1;
+    font-size:18px;
+    text-align:left;
+    border-bottom:1px solid $color1;
+    padding-bottom:5px;
+    margin-bottom:25px;
+    font-weight:bold;
+  }
+
+  h2.woocommerce-loop-product__title{
+    border:0;
+    font-size:16px;
+    text-align:center;
+    color:#858585;
+  }
+
+  .entry-summary{
+    text-align:left;
+    .product_title{
+      color:$color1;
+      font-weight:bold;
+      font-size:18px;
+      margin-bottom:25px;
+    }
+    .woocommerce-Price-amount{
+      color:$color1;
+      font-size:26px;
+      font-weight:bold;
+    }
+
+    .qty{
+      width:65px;
+      border:1px solid #858585 !important;
+      margin-bottom:25px;
+    }
+  }
+
+  .title-prod{
+    margin-top:60px;
+  }
+
+  .desc-prod{
+    text-align:left;
+    margin-bottom:60px;
+  }
+
+}
+
 
 .prods, ul.products{
   .prod, li.product{
@@ -178,6 +256,26 @@
       padding:15px 0;
       display:inline-block;
     }
+  }
+}
+
+#sidebar{
+  a{
+    display:block;
+    background-color:$color2;
+    color:$color1;
+    text-align:left;
+    padding:8px 20px;
+    margin-bottom:5px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  a:hover{
+    background-color:$color3;
+    color:#FFF;
   }
 }
 

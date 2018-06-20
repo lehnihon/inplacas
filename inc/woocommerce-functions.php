@@ -57,8 +57,10 @@ if ( ! function_exists( 'cart_update_qty_script' ) ) {
 if ( ! function_exists( 'woocommerce_description' ) ) {
 	function woocommerce_description() {
 		global $post;
-
-		the_content();
+    ?>
+    <h2 class="title-prod">Descrição do Produto</h2>
+    <div class="desc-prod"><?php the_content();?></div>
+    <?php
 	}
 }
 
@@ -81,6 +83,7 @@ if ( ! function_exists( 'lki_after_shop_loop_item_button' ) ) {
   <?php
   }
 }
+
 
 
 

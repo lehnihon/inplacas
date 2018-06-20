@@ -25,15 +25,25 @@ input.alt:hover{
 
 button.single_add_to_cart_button{
     @extend .btn;
-    background-color:$color2;
-    color:$color1;
-    border:1px solid $color2;
+    background-color:$color3;
+    color:#FFF;
+    border:1px solid $color3;
+    border-radius:0;
+    padding:10px 25px;
 }
 
 button.single_add_to_cart_button:hover{
-    color:$color2;
+    color:$color3;
     cursor: pointer;
     background-color:#FFF;
+}
+
+.woocommerce-MyAccount-content{
+  .button{
+    @extend .btn;
+    @extend .btn-dark;
+    color:#FFF !important;
+  }
 }
 
 .checkout{
@@ -54,4 +64,8 @@ button.single_add_to_cart_button:hover{
     .button:hover{
         cursor: pointer;
     }
+}
+
+.btn, .button{
+  border-radius:0;
 }

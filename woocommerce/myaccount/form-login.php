@@ -26,11 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
-<div class="row">
-  <div class="col">
-    <h1>Identificação</h1>
-  </div>
+
+<div class="col-md-12">
+  <h1>Identificação</h1>
 </div>
+
 <div class="u-columns col2-set" id="customer_login">
 
 	<div class="u-column1 col-1">
