@@ -18,12 +18,16 @@
 							<div class="col-md">
 								<h5>Nossos Produtos</h5>
 								<ul class="cat">
-									<li><a href="#">Categoria 1</a></li>
-									<li><a href="#">Categoria 2</a></li>
-									<li><a href="#">Categoria 3</a></li>
-									<li><a href="#">Categoria 4</a></li>
-									<li><a href="#">Categoria 5</a></li>
-									<li><a href="#">Categoria 6</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/incendio">Incêndio</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/rota-de-fuga">Rota de Fuga</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/complementar">Complementar</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/linha-15">Linha 15</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/linha-40">Linha 40</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/linha-60">Linha 60</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/epi">EPI</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/auto-extinguivel">Auto Extinguível</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/ingles">Inglês</a></li>
+									<li><a href="http://in-placaslux.com.br/categoria-produto/diversas">Diversas</a></li>
 								</ul>
 							</div>
 							<div class="col-md">
@@ -75,11 +79,11 @@
 					</div>
 					<div class="col-md-4 text-left">
 						<h5>Televendas</h5>
-						<span class="tel">11 1234-5678</span>
+						<span class="tel">11 5082-3705</span>
 						<p>
 							Horário de funcionamento:<br>
-							Segunda à sexta-feira: 09h às 17h<br>
-							Sábados 09h às 14h
+							Segunda à sexta-feira: 09h às 18h<br>
+							Sábados 09h às 17h
 						</p>
 					</div>
 				</div><!-- .row -->

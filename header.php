@@ -35,7 +35,7 @@ new WOW().init();
 					<div class="col-md-9">
 						<div class="topo-menu row justify-content-end">
 							<div class="col-md-auto"><a href="#">Sobre a In Placas</a></div>
-							<div class="col-md-auto"><a href="<?php echo home_url( '/minha-conta' ); ?>">Minha Conta / Cadastre-se</a></div>
+							<div class="col-md-auto"><a href="<?php //echo home_url( '/minha-conta' ); ?>">Minha Conta / Cadastre-se</a></div>
 							<div class="col-md-auto"><a href="#">Atendimento</a></div>
 						</div>
 						<div class="topo-pesquisa row justify-content-end">
@@ -61,12 +61,16 @@ new WOW().init();
 		<nav>
 			<div class="container">
 				<div class="row">
-					<div class="col-md"><a href="#">Categoria 1</a></div>
-					<div class="col-md"><a href="#">Categoria 2</a></div>
-					<div class="col-md"><a href="#">Categoria 3</a></div>
-					<div class="col-md"><a href="#">Categoria 4</a></div>
-					<div class="col-md"><a href="#">Categoria 5</a></div>
-					<div class="col-md"><a href="#">Categoria 6</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/incendio">Incêndio</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/rota-de-fuga">Rota de Fuga</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/complementar">Complementar</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/linha-15">Linha 15</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/linha-40">Linha 40</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/linha-60">Linha 60</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/epi">EPI</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/auto-extinguivel">Auto Extinguível</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/ingles">Inglês</a></div>
+					<div class="col-auto"><a class="px-1" href="http://in-placaslux.com.br/categoria-produto/diversas">Diversas</a></div>
 				</div>
 			</div>
 		</nav>
@@ -74,8 +78,8 @@ new WOW().init();
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-md-auto"><a href="#">Leis e Normas</a></div>
-					<div class="col-md-auto"><a href="<?php echo home_url( '/cliente-empresa' ); ?>">Conheça as vantagens de ser Cliente Empresa</a></div>
-					<div class="col-md-auto"><a href="<?php echo home_url( '/seja-representante' ); ?>">Seja nosso representante</a></div>
+					<div class="col-md-auto"><a href="<?php //echo home_url( '/cliente-empresa' ); ?>">Conheça as vantagens de ser Cliente Empresa</a></div>
+					<div class="col-md-auto"><a href="<?php //echo home_url( '/seja-representante' ); ?>">Seja nosso representante</a></div>
 				</div>
 			</div>
 		</div>
