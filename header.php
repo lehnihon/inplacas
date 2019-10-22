@@ -15,6 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="shortcut icon" type="image/png" href="<?php echo dirname( get_bloginfo('stylesheet_url'))."/assets/img/inplacaslux.png"; ?>" />
 
 <?php wp_head(); ?>
 <script>
@@ -59,16 +60,19 @@ new WOW().init();
 			</div>
 		</div>
 		<nav>
-			<div class="container">
-				<div class="row">
-					<div class="col-md"><a href="#">Categoria 1</a></div>
-					<div class="col-md"><a href="#">Categoria 2</a></div>
-					<div class="col-md"><a href="#">Categoria 3</a></div>
-					<div class="col-md"><a href="#">Categoria 4</a></div>
-					<div class="col-md"><a href="#">Categoria 5</a></div>
-					<div class="col-md"><a href="#">Categoria 6</a></div>
-				</div>
-			</div>
+			<?php
+            wp_nav_menu(array(
+            'menu'            => 'primary',
+            'theme_location'  => 'primary',
+            'container'       => '',
+            'container_class' => '',
+            'menu_id'         => false,
+            'menu_class'      => 'container mx-auto text-center',
+            'depth'           => 2,
+            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'          => new WP_Bootstrap_Navwalker()
+            ));
+            ?>
 		</nav>
 		<div id="menu">
 			<div class="container">
@@ -87,8 +91,8 @@ new WOW().init();
       <a href="#">Minha Conta / Cadastre-se</a>
       <a href="#">Atendimento</a>
       <a href="#">Leis e Normas</a>
-      <a href="#">Cliente Empresa</a>
-      <a href="#">Seja Nosso Representante</a>
+      <a href="<?php echo home_url( '/cliente-empresa' ); ?>">Cliente Empresa</a>
+      <a href="<?php echo home_url( '/seja-representante' ); ?>">Seja Nosso Representante</a>
     </div>
   </div>
   <div class="menu-open">

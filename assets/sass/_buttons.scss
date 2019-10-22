@@ -69,3 +69,36 @@ button.single_add_to_cart_button:hover{
 .btn, .button{
   border-radius:0;
 }
+
+.btn-yellow{
+    @extend .btn;
+    background-color:$color2;
+    color:$color1;
+    border:1px solid $color2;
+    &:hover{
+        color:$color2;
+        cursor: pointer;
+        background-color:#FFF;
+    }
+}
+
+.btn-green{
+    @extend .btn;
+    background-color:$color3;
+    color:#FFF;
+    border:1px solid $color3;
+    border-radius:0;
+    padding:10px 25px;
+    &:hover{
+        color:$color3;
+        cursor: pointer;
+        background-color:#FFF;
+    }
+}
+
+.input-green{
+    border:1px solid #009045;
+    padding:10px;
+    width:100%;
+}
+

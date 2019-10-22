@@ -7,6 +7,9 @@
 
 if ( ! function_exists( 'site_setup' ) ) :
 function site_setup() {
+  register_nav_menus( array(
+		'primary' => esc_html__( 'Menutopo 1', 'site' ),
+	) );
 	add_image_size('home-thumb',600,600,true);
 	add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 }
@@ -27,6 +30,14 @@ function site_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'site_scripts' );
+
+add_role(
+  'cliente_empresa',
+  __( 'Cliente Empresa' ),
+  array(
+    'read'         => true,  
+    'edit_posts'   => true,
+  ));
 
 function cliente_empresa(){
   $current_user = wp_get_current_user();
@@ -53,6 +64,7 @@ function add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
   return $cart_item_data;
 }
 add_filter( 'woocommerce_add_cart_item_data', 'add_cart_item_data', 10, 3 );
+
 
 function before_calculate_totals( $cart_obj ) {
   if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
@@ -110,6 +122,7 @@ add_action( 'woocommerce_process_product_meta', 'woo_add_custom_general_fields_s
 /**
  * Load integration
  */
-require 'inc/woocommerce-hooks.php';
-require  'inc/woocommerce-functions.php';
+require get_template_directory() .'/inc/woocommerce-hooks.php';
+require  get_template_directory() .'/inc/woocommerce-functions.php';
+require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
