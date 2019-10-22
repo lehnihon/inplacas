@@ -18,7 +18,7 @@ get_header(); ?>
     	<div class="row wow fadeIn">
     	    <div class="col-md">
             <?php 
-            echo do_shortcode('[smartslider3 slider=3]');
+            echo do_shortcode('[metaslider id="14"]');
             ?>
           </div>
       </div>
@@ -27,17 +27,17 @@ get_header(); ?>
       <div class="row wow fadeIn">
           <div class="col-md">
             <?php 
-            echo do_shortcode('[smartslider3 slider=4]');
+            echo do_shortcode('[metaslider id="18"]');
             ?>
           </div>
           <div class="col-md">
             <?php 
-            echo do_shortcode('[smartslider3 slider=5]');
+            echo do_shortcode('[metaslider id="20"]');
             ?>
           </div>
           <div class="col-md">
             <?php 
-            echo do_shortcode('[smartslider3 slider=6]');
+            echo do_shortcode('[metaslider id="22"]');
             ?>
           </div>
       </div>
@@ -45,7 +45,34 @@ get_header(); ?>
     <div class="prods container">
       <div class="row wow fadeIn">
         <?php
-        $args = array( 'post_type' => 'product', 'posts_per_page' => 8,  'orderby' => 'rand' );
+        $args = array( 'post_type' => 'product', 'posts_per_page' => 8,  'orderby' => 'rand','product_cat' => 'incendio' );
+        $loop = new WP_Query( $args );
+
+        while ( $loop->have_posts() ) : $loop->the_post();
+          global $product;
+          $price = $product->get_price_html();
+        ?>
+        <div class="col-md-3 prod">
+          <a class="wrap" href="<?php the_permalink(); ?>">
+            <h2><?php the_title(); ?></h2>
+            <?php the_post_thumbnail('home-thumb', array(
+              'class' => "e-cinza img-responsive",
+            )); ?>
+            <div class="preco">
+              <?php echo $price ?>
+            </div>
+            <div class="botao">Comprar</div>
+          </a>
+        </div>
+        <?php
+        endwhile;
+        ?>
+      </div>
+    </div>
+    <div class="prods container">
+      <div class="row wow fadeIn">
+        <?php
+        $args = array( 'post_type' => 'product', 'posts_per_page' => 8,  'orderby' => 'rand','product_cat' => 'auto-extinguivel' );
         $loop = new WP_Query( $args );
 
         while ( $loop->have_posts() ) : $loop->the_post();
@@ -87,31 +114,31 @@ get_header(); ?>
     </div>
   </div>
   <div class="prods container paddtop">
-      <div class="row wow fadeIn">
-        <?php
-        $args = array( 'post_type' => 'product', 'posts_per_page' => 4,  'orderby' => 'rand' );
-        $loop = new WP_Query( $args );
+    <div class="row wow fadeIn">
+      <?php
+      $args = array( 'post_type' => 'product', 'posts_per_page' => 4,  'orderby' => 'rand','product_cat' => 'diversas' );
+      $loop = new WP_Query( $args );
 
-        while ( $loop->have_posts() ) : $loop->the_post();
-          global $product;
-          $price = $product->get_price_html();
-        ?>
-        <div class="col-md-3 prod">
-          <a class="wrap" href="<?php the_permalink(); ?>">
-            <h2><?php the_title(); ?></h2>
-            <?php the_post_thumbnail('home-thumb', array(
-              'class' => "e-cinza img-responsive",
-            )); ?>
-            <div class="preco">
-              <?php echo $price ?>
-            </div>
-            <div class="botao">Comprar</div>
-          </a>
-        </div>
-        <?php
-        endwhile;
-        ?>
+      while ( $loop->have_posts() ) : $loop->the_post();
+        global $product;
+        $price = $product->get_price_html();
+      ?>
+      <div class="col-md-3 prod">
+        <a class="wrap" href="<?php the_permalink(); ?>">
+          <h2><?php the_title(); ?></h2>
+          <?php the_post_thumbnail('home-thumb', array(
+            'class' => "e-cinza img-responsive",
+          )); ?>
+          <div class="preco">
+            <?php echo $price ?>
+          </div>
+          <div class="botao">Comprar</div>
+        </a>
       </div>
+      <?php
+      endwhile;
+      ?>
     </div>
+  </div>
 </main>
 <?php get_footer(); ?>

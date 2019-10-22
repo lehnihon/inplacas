@@ -36,7 +36,7 @@ new WOW().init();
 					<div class="col-md-9">
 						<div class="topo-menu row justify-content-end">
 							<div class="col-md-auto"><a href="#">Sobre a In Placas</a></div>
-							<div class="col-md-auto"><a href="<?php echo home_url( '/minha-conta' ); ?>">Minha Conta / Cadastre-se</a></div>
+							<div class="col-md-auto"><a href="<?php //echo home_url( '/minha-conta' ); ?>">Minha Conta / Cadastre-se</a></div>
 							<div class="col-md-auto"><a href="#">Atendimento</a></div>
 						</div>
 						<div class="topo-pesquisa row justify-content-end">
@@ -78,8 +78,8 @@ new WOW().init();
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-md-auto"><a href="#">Leis e Normas</a></div>
-					<div class="col-md-auto"><a href="<?php echo home_url( '/cliente-empresa' ); ?>">Conheça as vantagens de ser Cliente Empresa</a></div>
-					<div class="col-md-auto"><a href="<?php echo home_url( '/seja-representante' ); ?>">Seja nosso representante</a></div>
+					<div class="col-md-auto"><a href="<?php //echo home_url( '/cliente-empresa' ); ?>">Conheça as vantagens de ser Cliente Empresa</a></div>
+					<div class="col-md-auto"><a href="<?php //echo home_url( '/seja-representante' ); ?>">Seja nosso representante</a></div>
 				</div>
 			</div>
 		</div>
